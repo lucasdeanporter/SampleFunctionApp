@@ -1,0 +1,22 @@
+{
+  // Default configuration.
+  "version": "2.0",
+  "logging": { // https://learn.microsoft.com/en-us/azure/azure-functions/functions-host-json
+    "applicationInsights": {
+      // https://learn.microsoft.com/en-us/azure/azure-functions/configure-monitoring?tabs=v2#enable-sql-query-collection
+      "enableDependencyTracking": true,
+      "dependencyTrackingOptions": {
+        "enableSqlCommandTextInstrumentation": true
+      },
+      // Default configuration
+      "samplingSettings": {
+        "isEnabled": true,
+        "excludedTypes": "Request;Exception"
+      }
+      // https://learn.microsoft.com/en-us/azure/azure-functions/configure-monitoring?tabs=v2#enable-application-insights-integration
+      //APPINSIGHTS_INSTRUMENTATIONKEY
+    }
+  }
+}
+
+// implement https://learn.microsoft.com/en-us/azure/azure-functions/configure-monitoring?tabs=v2#solutions-with-high-volume-of-telemetry

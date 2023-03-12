@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    // https://learn.microsoft.com/en-us/azure/azure-functions/functions-host-json#override-hostjson-values
+    "AzureFunctionsJobHost__logging__applicationInsights__samplingSettings__isEnabled": "false"
+  }
+}
