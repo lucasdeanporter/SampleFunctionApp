@@ -6,7 +6,7 @@ using System;
 
 namespace SampleFunctionApp.Fundamentals.Interfaces.IContexts.IMethodContext
 {
-    internal class MethodContextRecord : IMethodContext
+    internal class MethodContextRecord //: IMethodContext
     {
         // do not use semicolons in messages. Harder to parse later.
 

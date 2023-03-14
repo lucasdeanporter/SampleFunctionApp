@@ -1,4 +1,6 @@
-﻿namespace SampleFunctionApp.Fundamentals.Interfaces.IFramework
+﻿using SampleFunctionApp.Fundamentals.Interfaces.IDo;
+
+namespace SampleFunctionApp.Fundamentals.Interfaces.IFramework
 {
     public interface ILogic : ILogicRecord, IReadWrite, IFramework
     {

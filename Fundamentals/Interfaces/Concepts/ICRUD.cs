@@ -7,7 +7,7 @@ using SampleFunctionApp.Fundamentals.Interfaces.IContexts.IMethodContext;
 
 namespace SampleFunctionApp.Fundamentals.Interfaces.Concepts
 {
-    internal interface ICRUD : IConcept
+    public interface ICRUD : IConcept
     {
         // Create Read Update Delete basic methodology.
     }

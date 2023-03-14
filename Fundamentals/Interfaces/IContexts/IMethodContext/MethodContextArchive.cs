@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SampleFunctionApp.Fundamentals.Interfaces.IContexts.IMethodContext
 {
-    internal class MethodContextArchive : IMethodContext
+    internal class MethodContextArchive //: IMethodContext
     {
         // these are related with general operations, easier to think in terms of a method that executes as a client interaction to a website.
 

@@ -1,6 +1,7 @@
 ﻿using SampleFunctionApp.Fundamentals.Features;
 using SampleFunctionApp.Fundamentals.Interfaces.IContexts.IMethodContext;
 using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
+using SampleFunctionApp.Fundamentals.Interfaces.ITime;
 
 namespace SampleFunctionApp.Interfaces
 {
@@ -8,6 +9,6 @@ namespace SampleFunctionApp.Interfaces
     {
         ILogRecord LogRecord { get; set; }
         ISessionRecord SessionRecord { get; set; }
-        IDurationRecord DurationRecord { get; set; }
+        internal IDurationRecord DurationRecord { get; set; }
     }
 }
