@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IAppSessionContext
+namespace SampleFunctionApp.Classes.INetworkContext
 {
-    internal interface IAppSessionContext
+    internal class NetworkContext
     {
     }
 }

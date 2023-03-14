@@ -1,6 +1,6 @@
-﻿namespace SampleFunctionApp.Fundamentals.Interfaces.IGeneral
+﻿namespace SampleFunctionApp.Fundamentals.Interfaces.Concepts
 {
-    public interface IMediator : IGeneral
+    public interface IMediator : IConcept
     {
         // To indicate something is a mediator where it centrally handles either network or data connections and related.
     }

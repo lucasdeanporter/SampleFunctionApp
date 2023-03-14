@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IAppSessionContext
+namespace SampleFunctionApp.Fundamentals.Interfaces.IContexts.IAppSessionContext
 {
     public class AppSessionContextLogicRecord
     {

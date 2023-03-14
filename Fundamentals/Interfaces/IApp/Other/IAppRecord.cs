@@ -3,7 +3,7 @@ using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
 using SampleFunctionApp.Fundamentals.Interfaces.IGeneral;
 using SampleFunctionApp.Fundamentals.Interfaces.ITime;
 
-namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.Archive
+namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.Other
 {
     public interface IAppRecord : IRecord
     {

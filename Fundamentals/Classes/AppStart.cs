@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleFunctionApp.Fundamentals.Classes.IGeneral
+namespace SampleFunctionApp.Fundamentals.Classes
 {
     internal class AppStart //: IAppStartRecord, ITime
     {

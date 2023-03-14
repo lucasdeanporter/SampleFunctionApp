@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleFunctionApp.Fundamentals.Interfaces.IApp
+namespace SampleFunctionApp.Fundamentals.Features
 {
     internal interface IStopwatch : ITimeArchive
     {
