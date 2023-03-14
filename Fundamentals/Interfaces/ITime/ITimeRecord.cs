@@ -1,5 +1,4 @@
-﻿using SampleFunctionApp.Fundamentals.Classes.IGeneral;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +9,8 @@ namespace SampleFunctionApp.Fundamentals.Interfaces.ITime
 {
     internal interface ITimeRecord : ITimeArchive
     {
-        public static DateTime EndTime { get => DateTime.UtcNow; }
-        public static DateTime StartTime { get => ITimeArchive.start; set => ITimeArchive.start = value; }
-        public static DateTime GetTimeNow => AppStart.;
-        static void OnStart(); // set time
-        public void OnEnd(); // set end
+        public static DateTime EndTime;
+        public static DateTime StartTime;
+        public static DateTime GetTimeNow => DateTime.UtcNow;
     }
 }
