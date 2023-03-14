@@ -4,13 +4,13 @@ namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IAppSessionContext
 {
     internal class AppSessionContextRecord
     {
-        AppSessionContextArchive sessionArchive; // closest to database. Should not do a lot of logic, should just be what the data looks like.
+        AppContextArchive sessionArchive; // closest to database. Should not do a lot of logic, should just be what the data looks like.
         private AppStartArchive startArchive; // these only need to be accessible here.
         private AppEndArchive endArchive;
         private AppRuntimeArchive runtimeArchive;
         internal AppSessionContextRecord(DateTime startTime, long correlationID)
         {
-            sessionArchive = new AppSessionContextArchive(startTime, correlationID);
+            sessionArchive = new AppContextArchive(startTime, correlationID);
             startArchive = new AppStartArchive(startTime, correlationID);
             // execute archive here.
         }

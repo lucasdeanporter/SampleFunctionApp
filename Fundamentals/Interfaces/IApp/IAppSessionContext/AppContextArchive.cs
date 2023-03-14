@@ -4,12 +4,12 @@ using System.Xml.Linq;
 
 namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IAppSessionContext
 {
-    internal class AppSessionContextArchive
+    internal class AppContextArchive
     {
-        internal AppSessionContextArchive(DateTime startTime, long correlationID)
+        internal AppContextArchive(DateTime startTime, long correlationID)
         {
             StartTimestamp = startTime;
-            if (correlationID == AppSessionContextArchive.correlationID)
+            if (correlationID == AppContextArchive.correlationID)
             {
                 // Log it.
             }

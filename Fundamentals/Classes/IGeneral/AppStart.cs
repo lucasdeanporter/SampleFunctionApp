@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Classes.IGeneral
 {
-    internal class AppStart : IAppStartRecord, ITime
+    internal class AppStart //: IAppStartRecord, ITime
     {
         private static DateTime appStart = new DateTime();
 

@@ -1,7 +1,7 @@
 ﻿using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
 using System;
 
-namespace SampleFunctionApp.Fundamentals.Interfaces.IGeneral.IGeneral
+namespace SampleFunctionApp.Fundamentals.Interfaces.IGeneral
 {
     public interface IChangeArchive : IArchive, IGeneral
     {

@@ -1,4 +1,4 @@
-﻿namespace SampleFunctionApp.Fundamentals.Interfaces.IGeneral
+﻿namespace SampleFunctionApp.Fundamentals.Interfaces.Concepts
 {
     public interface IService : IGeneral
     {

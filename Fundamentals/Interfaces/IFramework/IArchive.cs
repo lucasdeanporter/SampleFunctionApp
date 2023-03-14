@@ -2,7 +2,7 @@
 
 namespace SampleFunctionApp.Fundamentals.Interfaces.IFramework
 {
-    public interface IArchive : IRead, ITime, IRelate, IFramework
+    public interface IArchive : IRead, IRelate, IFramework
     {
         // Intended to only be concerned with storing data in basic parameters. Interfaces with IRecords.
     }

@@ -1,15 +1,8 @@
-﻿using SampleFunctionApp.Classes.IAppSessionContext;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SampleFunctionApp.Classes.ITime
+﻿namespace SampleFunctionApp.Classes.ITime
 {
     internal class Time
     {
-
+        /*
         public readonly DateTime Start { get; set; }
         public readonly DateTime End { get; set; }
         private Time()
@@ -28,5 +21,6 @@ namespace SampleFunctionApp.Classes.ITime
 
             }
         }
+        */
     }
 }
