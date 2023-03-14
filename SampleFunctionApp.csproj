@@ -4,11 +4,8 @@
     <AzureFunctionsVersion>v4</AzureFunctionsVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="Classes\IAutoUpdate\**" />
     <Compile Remove="Classes\ILog\**" />
-    <EmbeddedResource Remove="Classes\IAutoUpdate\**" />
     <EmbeddedResource Remove="Classes\ILog\**" />
-    <None Remove="Classes\IAutoUpdate\**" />
     <None Remove="Classes\ILog\**" />
   </ItemGroup>
   <ItemGroup>
@@ -24,6 +21,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Classes\IAutoUpdate\" />
+    <Folder Include="Classes\ICanary\" />
+    <Folder Include="Classes\ISecondResource\" />
+    <Folder Include="Classes\IPrimaryResource\" />
     <Folder Include="Fundamentals\Interfaces\Other\" />
   </ItemGroup>
 </Project>
