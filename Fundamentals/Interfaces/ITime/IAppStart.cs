@@ -10,6 +10,8 @@ namespace SampleFunctionApp.Fundamentals.Interfaces.ITime
     {
         private static DateTime appStart;
 
+        private string 
+
         void IAppStart(string appName, long correlationID);
     }
 }
