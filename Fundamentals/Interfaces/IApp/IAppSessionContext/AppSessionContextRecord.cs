@@ -1,6 +1,7 @@
 ﻿using System;
+using SampleFunctionApp.Fundamentals.Interfaces.IApp;
 
-namespace SampleFunctionApp.Fundamentals.Interfaces.IContexts.IAppSessionContext
+namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IAppSessionContext
 {
     internal class AppSessionContextRecord
     {

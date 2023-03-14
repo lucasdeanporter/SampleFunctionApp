@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleFunctionApp.Interfaces
+namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IAppLog
 {
     internal interface ILogDisplay : ILogLogic
     {

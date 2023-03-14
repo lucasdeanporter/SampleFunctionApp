@@ -1,10 +1,10 @@
-﻿using SampleFunctionApp.Fundamentals.Features;
-using SampleFunctionApp.Fundamentals.Interfaces.IContexts.IMethodContext;
+﻿using SampleFunctionApp.Fundamentals.Classes.IApp.IAppContext.IMethodContext;
+using SampleFunctionApp.Fundamentals.Features;
 using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
 using SampleFunctionApp.Fundamentals.Interfaces.ITime;
 using System.Collections.Generic;
 
-namespace SampleFunctionApp.Interfaces
+namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IAppLog
 {
     public interface ILogArchive : ISessionArchive, IDurationArchive, IArchive, ILog
     {

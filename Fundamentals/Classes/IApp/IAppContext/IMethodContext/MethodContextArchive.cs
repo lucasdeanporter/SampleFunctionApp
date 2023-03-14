@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SampleFunctionApp.Fundamentals.Interfaces.IContexts.IMethodContext
+namespace SampleFunctionApp.Fundamentals.Classes.IApp.IAppContext.IMethodContext
 {
     internal class MethodContextArchive //: IMethodContext
     {

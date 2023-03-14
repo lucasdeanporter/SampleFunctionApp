@@ -2,7 +2,7 @@
 using System.Runtime.Versioning;
 using System.Xml.Linq;
 
-namespace SampleFunctionApp.Fundamentals.Interfaces.IContexts.IAppSessionContext
+namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IAppSessionContext
 {
     internal class AppContextArchive
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SampleFunctionApp.Fundamentals.Interfaces.IContexts.IAppSessionContext
+namespace SampleFunctionApp.Fundamentals.Interfaces.IApp
 {
     internal class AppStartArchive
     {

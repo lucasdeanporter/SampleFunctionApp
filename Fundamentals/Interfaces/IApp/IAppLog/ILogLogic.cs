@@ -1,7 +1,7 @@
 ﻿using SampleFunctionApp.Fundamentals.Features;
 using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
 
-namespace SampleFunctionApp.Interfaces
+namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IAppLog
 {
     public interface ILogLogic : ILogic, ILog
     {

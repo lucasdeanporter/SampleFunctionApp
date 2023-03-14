@@ -1,6 +1,6 @@
 ﻿using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
 
-namespace SampleFunctionApp.Fundamentals.Interfaces.IContexts.IMethodContext
+namespace SampleFunctionApp.Fundamentals.Classes.IApp.IAppContext.IMethodContext
 {
     public interface ISessionArchive : IArchive
     {

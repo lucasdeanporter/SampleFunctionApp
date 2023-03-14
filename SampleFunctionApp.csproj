@@ -25,6 +25,12 @@
     <Folder Include="Classes\ICanary\" />
     <Folder Include="Classes\ISecondResource\" />
     <Folder Include="Classes\IPrimaryResource\" />
-    <Folder Include="Fundamentals\Interfaces\Other\" />
+    <Folder Include="Fundamentals\Classes\IApp\IAppContext\IAppExternalID\" />
+    <Folder Include="Fundamentals\Classes\IApp\IAppContext\IAppInternalID\" />
+    <Folder Include="Fundamentals\Classes\IApp\IAppLog\" />
+    <Folder Include="Fundamentals\Interfaces\IApp\IAppNetworkCanary\" />
+    <Folder Include="Fundamentals\Interfaces\IApp\IAppNetworkTests\" />
+    <Folder Include="Fundamentals\Interfaces\IContexts\" />
+    <Folder Include="Fundamentals\Interfaces\Other\IAppSessionContext\" />
   </ItemGroup>
 </Project>

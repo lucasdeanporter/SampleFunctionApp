@@ -1,7 +1,7 @@
 ﻿using SampleFunctionApp.Fundamentals.Interfaces.Concepts;
 using System;
 
-namespace SampleFunctionApp.Fundamentals.Interfaces.IContexts.IAppSessionContext
+namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IAppSessionContext
 {
     internal class AppSessionContextLogic : IMediator
     {

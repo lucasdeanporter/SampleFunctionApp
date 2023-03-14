@@ -1,4 +1,6 @@
-﻿namespace SampleFunctionApp.Fundamentals.Interfaces.IContexts.IAppSessionContext
+﻿using SampleFunctionApp.Fundamentals.Interfaces.IApp;
+
+namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IAppSessionContext
 {
     public class AppRuntimeArchive
     {
