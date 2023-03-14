@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Interfaces.ITime
 {
-    public interface ITimeArchive
+    internal interface ITimeLogicRecord
     {
-        private DateTime start;
-        private DateTime end;
     }
 }

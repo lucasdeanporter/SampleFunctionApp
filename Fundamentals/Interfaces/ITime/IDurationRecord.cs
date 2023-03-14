@@ -11,6 +11,6 @@ namespace SampleFunctionApp.Fundamentals.Interfaces.ITime
         TimeSpan Duration { get; set; }
         int GetDuration(string secondMinuteHourOrDay);
         bool StartTimeExists();
-        bool EndTimeExists()
+        bool EndTimeExists();
     }
 }

@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Interfaces.ITime
 {
-    public interface ITimeArchive
+    internal interface IAppStart
     {
-        private DateTime start;
-        private DateTime end;
+        private static DateTime appStart;
+
+        void IAppStart(string appName, long correlationID);
     }
 }
