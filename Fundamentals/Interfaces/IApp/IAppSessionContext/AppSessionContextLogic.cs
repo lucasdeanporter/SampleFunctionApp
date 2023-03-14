@@ -1,11 +1,11 @@
 ﻿using SampleFunctionApp.Fundamentals.Interfaces.IGeneral;
 using System;
 
-namespace SampleFunctionApp.Classes.IAppSessionContext
+namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IAppSessionContext
 {
     internal class AppSessionContextLogic : IMediator
     {
-        private AppSessionContextLogicRecord? logicRecord = null;
+        private AppSessionContextLogicRecord logicRecord = null;
 
         AppSessionContextRecord _record; // Conglomerates a lot of other features when saving to database. Also serves Logic layer.
         AppSessionContextLogic _logic; // Does things closer to presenting information to other service and features.

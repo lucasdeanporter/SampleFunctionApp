@@ -1,5 +1,5 @@
-﻿using SampleFunctionApp.Features;
-using SampleFunctionApp.Fundamentals.Classes.Examples;
+﻿using SampleFunctionApp.Fundamentals.Classes.Examples;
+using SampleFunctionApp.Fundamentals.Features;
 using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
 using SampleFunctionApp.Fundamentals.Interfaces.IGeneral;
 using System.Collections.Generic;

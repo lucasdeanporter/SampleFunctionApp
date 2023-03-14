@@ -1,6 +1,4 @@
-﻿
-
-namespace SampleFunctionApp.Features
+﻿namespace SampleFunctionApp.Fundamentals.Features
 {
     internal interface IMethodContext
     {

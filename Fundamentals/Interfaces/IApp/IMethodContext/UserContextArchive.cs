@@ -1,4 +1,4 @@
-﻿namespace SampleFunctionApp.Features.IMethodContext
+﻿namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IMethodContext
 {
     internal class UserContextArchive : IMethodContext
     {

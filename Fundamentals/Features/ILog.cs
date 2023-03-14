@@ -1,4 +1,4 @@
-﻿namespace SampleFunctionApp.Features
+﻿namespace SampleFunctionApp.Fundamentals.Features
 {
     public interface ILog
     {

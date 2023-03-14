@@ -8,7 +8,7 @@ namespace SampleFunctionApp.Fundamentals.Interfaces.ITime
 {
     public interface ITimeArchive
     {
-        private DateTime start;
-        private DateTime end;
+        DateTime Start { get; set; }
+        DateTime End { get; set; }
     }
 }

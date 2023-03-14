@@ -1,4 +1,5 @@
-﻿using SampleFunctionApp.Fundamentals.Interfaces.ITime;
+﻿using SampleFunctionApp.Fundamentals.Interfaces.IApp;
+using SampleFunctionApp.Fundamentals.Interfaces.ITime;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Classes.IGeneral
 {
-    internal class AppStart : IAppStart, ITime
+    internal class AppStart : IAppStartRecord, ITime
     {
         private static DateTime appStart = new DateTime();
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SampleFunctionApp.Classes.IAppSessionContext
+namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IAppSessionContext
 {
     internal class AppStartArchive
     {
@@ -9,7 +9,7 @@ namespace SampleFunctionApp.Classes.IAppSessionContext
 
         internal AppStartArchive(DateTime startTimestamp, long correlationID)
         {
-            this.StartTimestamp = startTimestamp;
+            StartTimestamp = startTimestamp;
             this.correlationID = correlationID;
         }
     }

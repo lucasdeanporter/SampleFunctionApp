@@ -1,4 +1,4 @@
-﻿using SampleFunctionApp.Features;
+﻿using SampleFunctionApp.Fundamentals.Features;
 using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
 using SampleFunctionApp.Fundamentals.Interfaces.IGeneral;
 

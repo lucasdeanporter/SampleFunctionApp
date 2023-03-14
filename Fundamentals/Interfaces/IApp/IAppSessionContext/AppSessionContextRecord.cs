@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SampleFunctionApp.Classes.IAppSessionContext
+namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IAppSessionContext
 {
     internal class AppSessionContextRecord
     {
@@ -15,7 +15,7 @@ namespace SampleFunctionApp.Classes.IAppSessionContext
             // execute archive here.
         }
 
-        internal bool sessionUpdate() 
+        internal bool sessionUpdate()
         {
             //sessionArchive
             return true;

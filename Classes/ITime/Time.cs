@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Classes.ITime
 {
-    internal class Time : ITime
+    internal class Time
     {
 
         public readonly DateTime Start { get; set; }

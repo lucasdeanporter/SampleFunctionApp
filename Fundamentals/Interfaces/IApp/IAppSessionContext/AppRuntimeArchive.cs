@@ -1,4 +1,4 @@
-﻿namespace SampleFunctionApp.Classes.IAppSessionContext
+﻿namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IAppSessionContext
 {
     public class AppRuntimeArchive
     {
@@ -7,8 +7,8 @@
 
         AppRuntimeArchive(AppStartArchive start, AppEndArchive end)
         {
-            this.Start = start;
-            this.End = end;
+            Start = start;
+            End = end;
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleFunctionApp.Features
+namespace SampleFunctionApp.Fundamentals.Features
 {
     internal interface IAppSessionContext
     {
