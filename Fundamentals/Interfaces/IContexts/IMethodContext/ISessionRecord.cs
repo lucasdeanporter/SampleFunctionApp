@@ -1,8 +1,8 @@
 ﻿using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
 
-namespace SampleFunctionApp.Fundamentals.Interfaces.IGeneral
+namespace SampleFunctionApp.Fundamentals.Interfaces.IContexts.IMethodContext
 {
-    public interface ISessionRecord : ISessionArchive, IRecord, IGeneral
+    public interface ISessionRecord : ISessionArchive, IRecord
     {
         //SessionArchive SessionArchive { get; set; }
         void SetSessionId(string sessionId);

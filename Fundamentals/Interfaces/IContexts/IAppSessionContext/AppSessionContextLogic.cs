@@ -1,4 +1,4 @@
-﻿using SampleFunctionApp.Fundamentals.Interfaces.IGeneral;
+﻿using SampleFunctionApp.Fundamentals.Interfaces.Concepts;
 using System;
 
 namespace SampleFunctionApp.Fundamentals.Interfaces.IContexts.IAppSessionContext

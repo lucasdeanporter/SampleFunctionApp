@@ -1,4 +1,6 @@
-﻿namespace SampleFunctionApp.Fundamentals.Interfaces.Concepts
+﻿using SampleFunctionApp.Fundamentals.Interfaces.IContexts.IMethodContext;
+
+namespace SampleFunctionApp.Fundamentals.Interfaces.Concepts
 {
     public interface IMediator : IConcept
     {

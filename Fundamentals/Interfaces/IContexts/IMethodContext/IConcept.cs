@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleFunctionApp.Fundamentals.Interfaces.Concepts
+namespace SampleFunctionApp.Fundamentals.Interfaces.IContexts.IMethodContext
 {
     public interface IConcept : IFundamental
     {
