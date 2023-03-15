@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleFunctionApp.Classes.IFailover.IPrimaryResource
+namespace SampleFunctionApp.Classes.IFailover.ISecondResource
 {
-    internal class PrimaryDependency
+    internal class ISecondaryResourceArchive
     {
         public bool isPublicIPAddress { get; set; }
 
