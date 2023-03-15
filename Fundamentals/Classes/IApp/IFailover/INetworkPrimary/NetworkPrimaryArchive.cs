@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleFunctionApp.Classes.IFailover.INetworkPrimary
+namespace SampleFunctionApp.Fundamentals.Classes.IApp.IFailover.INetworkPrimary
 {
     internal class NetworkPrimaryArchive
     {

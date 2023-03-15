@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleFunctionApp.Classes.IFailover.INetworkSecondary
+namespace SampleFunctionApp.Fundamentals.Classes.IApp.IFailover.ISecondaryResource
 {
-    internal class NetworkSecondaryArchive
+    internal class ISecondaryResourceArchive
     {
         public bool isPublicIPAddress { get; set; }
+
     }
 }

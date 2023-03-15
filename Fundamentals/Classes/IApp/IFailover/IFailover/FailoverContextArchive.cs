@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleFunctionApp.Classes.IFailover.IFailover
+namespace SampleFunctionApp.Fundamentals.Classes.IApp.IFailover.IFailover
 {
     internal class FailoverContextArchive
     {
