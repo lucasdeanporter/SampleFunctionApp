@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Features
 {
-    internal interface IFileShare
+    internal interface INetworkCanary
     {
     }
 }

@@ -1,8 +1,8 @@
 ﻿using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
 
-namespace SampleFunctionApp.Fundamentals.Interfaces.IGeneral
+namespace SampleFunctionApp.Fundamentals.Interfaces.Other
 {
-    public interface IPageRecord : IRecord, IGeneral // See how this is simplified with an IRecord?
+    public interface IPageRecord : IRecord//, IGeneral // See how this is simplified with an IRecord?
     {
         string PageName { get; set; }
         object PageObject { get; set; } //TODO: Every page should probably have a LogWriter.

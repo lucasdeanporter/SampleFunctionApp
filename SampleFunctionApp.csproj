@@ -21,14 +21,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\IAutoUpdate\" />
-    <Folder Include="Classes\ICanary\" />
-    <Folder Include="Classes\ISecondResource\" />
-    <Folder Include="Classes\IPrimaryResource\" />
-    <Folder Include="Fundamentals\Classes\IApp\IAppContext\IAppExternalID\" />
-    <Folder Include="Fundamentals\Classes\IApp\IAppContext\IAppInternalID\" />
+    <Folder Include="Classes\INetworkCanary\IUpload\" />
+    <Folder Include="Classes\INetworkCanary\IPing\" />
+    <Folder Include="Classes\INetworkCanary\ITest\" />
+    <Folder Include="Classes\INetworkCanary\ICollect\" />
+    <Folder Include="Fundamentals\Classes\IApp\IAppContext\IAppContext\IAppExternalID\" />
+    <Folder Include="Fundamentals\Classes\IApp\IAppContext\IAppContext\IAppInternalID\" />
     <Folder Include="Fundamentals\Classes\IApp\IAppLog\" />
-    <Folder Include="Fundamentals\Interfaces\IApp\IAppNetworkCanary\" />
     <Folder Include="Fundamentals\Interfaces\IApp\IAppNetworkTests\" />
     <Folder Include="Fundamentals\Interfaces\IContexts\" />
     <Folder Include="Fundamentals\Interfaces\Other\IAppSessionContext\" />

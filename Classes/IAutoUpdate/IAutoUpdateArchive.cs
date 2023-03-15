@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleFunctionApp.Fundamentals.Interfaces.IStartupCanary
+namespace SampleFunctionApp.Classes.IAutoUpdate
 {
-    internal interface IStartupCanary
+    internal class IAutoUpdateArchive
     {
-    } 
+    }
 }
