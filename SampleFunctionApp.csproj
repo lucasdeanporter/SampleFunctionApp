@@ -21,10 +21,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\INetworkCanary\IUpload\" />
-    <Folder Include="Classes\INetworkCanary\IPing\" />
-    <Folder Include="Classes\INetworkCanary\ITest\" />
-    <Folder Include="Classes\INetworkCanary\ICollect\" />
+    <Folder Include="Fundamentals\Interfaces\IApp\IAppNetworkCanary\IUpload\" />
+    <Folder Include="Fundamentals\Interfaces\IApp\IAppNetworkCanary\IPing\" />
+    <Folder Include="Fundamentals\Interfaces\IApp\IAppNetworkCanary\ITest\" />
+    <Folder Include="Fundamentals\Interfaces\IApp\IAppNetworkCanary\ICollect\" />
     <Folder Include="Fundamentals\Classes\IApp\IAppContext\IAppContext\IAppExternalID\" />
     <Folder Include="Fundamentals\Classes\IApp\IAppContext\IAppContext\IAppInternalID\" />
     <Folder Include="Fundamentals\Classes\IApp\IAppLog\" />
