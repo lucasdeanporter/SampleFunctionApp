@@ -1,4 +1,5 @@
 ﻿using SampleFunctionApp.Fundamentals.Interfaces.IDo;
+using SampleFunctionApp.Fundamentals.Interfaces.ITime;
 
 namespace SampleFunctionApp.Fundamentals.Interfaces.IFramework
 {
