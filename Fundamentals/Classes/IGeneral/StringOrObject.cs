@@ -1,6 +1,8 @@
-﻿namespace SampleFunctionApp.Fundamentals.Classes.Examples
+﻿using SampleFunctionApp.Fundamentals.Interfaces.IGeneral;
+
+namespace SampleFunctionApp.Fundamentals.Classes.IGeneral
 {
-    public class StringOrObject
+    public class StringOrObject : IGeneral
     {
         public string Str = null;
         public object Obj = null;

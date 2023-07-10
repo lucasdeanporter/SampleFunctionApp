@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleFunctionApp.Features
+namespace SampleFunctionApp.Interfaces.IDownload
 {
-    internal interface INetworkCanary
+    internal interface IDownload
     {
     }
 }

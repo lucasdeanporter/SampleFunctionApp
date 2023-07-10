@@ -1,5 +1,5 @@
-﻿using SampleFunctionApp.Fundamentals.Classes.Examples;
-using SampleFunctionApp.Fundamentals.Classes.IApp.IAppContext.IMethodContext;
+﻿using SampleFunctionApp.Fundamentals.Classes.IApp.IAppContext.IMethodContext;
+using SampleFunctionApp.Fundamentals.Classes.IGeneral;
 using SampleFunctionApp.Fundamentals.Features;
 using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
 using SampleFunctionApp.Fundamentals.Interfaces.ITime;

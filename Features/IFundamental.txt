@@ -1,0 +1,1 @@
+Fundamental classification for separation of software concerns.
