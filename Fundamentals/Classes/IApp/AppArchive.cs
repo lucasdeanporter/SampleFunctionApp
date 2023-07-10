@@ -12,13 +12,15 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
 {
     internal class AppArchive : IAppArchive
     {
-        string IChangeArchive.CreatedByUserId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        DateTime IChangeArchive.CreatedByTimestamp { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        string IChangeArchive.ModifiedByUserId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        DateTime IChangeArchive.ModifiedByTimestamp { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        string IChange.Action { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        DateTime ITimeArchive.Start { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        DateTime ITimeArchive.End { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        long IRelate.RelateId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        AppArchive()
+        {
+            Start = DateTime.Now;
+            RelateId = this.Start.ToString();
+        }
+
+        public DateTime Start { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DateTime End { get; set; }
+        public string RelateId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }

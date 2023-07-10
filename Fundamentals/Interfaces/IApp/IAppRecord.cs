@@ -1,5 +1,4 @@
-﻿using SampleFunctionApp.Fundamentals.Interfaces.IData;
-using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
+﻿using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
 using SampleFunctionApp.Fundamentals.Interfaces.ITime;
 using System;
 using System.Collections.Generic;
@@ -9,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Interfaces.IApp
 {
-    internal interface IAppArchive : IArchive, ITimeArchive
+    internal interface IAppRecord : IRecord, ITimeRecord
     {
+        IAppArchive appArchive { get; set; }
     }
 }

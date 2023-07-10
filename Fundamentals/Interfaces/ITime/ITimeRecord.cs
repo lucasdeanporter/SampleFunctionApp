@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Interfaces.ITime
 {
-    internal interface ITimeRecord : IRecord, ITimeArchive
+    internal interface ITimeRecord : IRecord
     {
         public static DateTime StartTime;
         public static DateTime EndTime;
-        public static DateTime GetTimeNow => DateTime.UtcNow;
+        public static DateTime GetTimeNow => DateTime.UtcNow
+        ITimeArchive timeArchive {get; set;}
     }
 }
