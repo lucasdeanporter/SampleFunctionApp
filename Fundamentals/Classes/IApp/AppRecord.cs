@@ -9,23 +9,27 @@ using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Classes.IApp
 {
-    internal class AppRecord : IAppRecord
+    public class AppRecord : IAppRecord
     {
-        IAppArchive IAppRecord.appArchive { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        ITimeArchive ITimeRecord.timeArchive { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        string IRelate.RelateId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        AppRecord()
+        {
+            appArchive = new AppArchive();
+        }
 
-        void IWrite.NotifyWriteFailure(dynamic wasWrite)
+        public IAppArchive appArchive { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public ITimeRecord timeRecord { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public void NotifyWriteFailure(dynamic wasWrite)
         {
             throw new NotImplementedException();
         }
 
-        bool IWrite.Write(dynamic toWrite)
+        public bool Write(dynamic toWrite)
         {
             throw new NotImplementedException();
         }
 
-        bool IWrite.WriteFailure(dynamic toWrite)
+        public bool WriteFailure(dynamic toWrite)
         {
             throw new NotImplementedException();
         }

@@ -5,8 +5,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Classes\ILog\**" />
+    <Compile Remove="Fundamentals\Interfaces\IApp\IAppNetworkTests\**" />
+    <Compile Remove="Fundamentals\Interfaces\IContexts\**" />
     <EmbeddedResource Remove="Classes\ILog\**" />
+    <EmbeddedResource Remove="Fundamentals\Interfaces\IApp\IAppNetworkTests\**" />
+    <EmbeddedResource Remove="Fundamentals\Interfaces\IContexts\**" />
     <None Remove="Classes\ILog\**" />
+    <None Remove="Fundamentals\Interfaces\IApp\IAppNetworkTests\**" />
+    <None Remove="Fundamentals\Interfaces\IContexts\**" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.1.1" />
@@ -25,12 +31,8 @@
     <Folder Include="Classes\INetworkCanary\IUpload\" />
     <Folder Include="Classes\INetworkCanary\IPing\" />
     <Folder Include="Classes\INetworkCanary\ITest\" />
-    <Folder Include="Fundamentals\Classes\IApp\IAppContext\IAppContext\IAppExternalID\" />
-    <Folder Include="Fundamentals\Classes\IApp\IAppContext\IAppContext\IAppInternalID\" />
-    <Folder Include="Fundamentals\Classes\IApp\IAppLog\" />
+    <Folder Include="Fundamentals\Classes\ITime\" />
     <Folder Include="Fundamentals\Features\ITime\" />
-    <Folder Include="Fundamentals\Interfaces\IApp\IAppNetworkTests\" />
-    <Folder Include="Fundamentals\Interfaces\IContexts\" />
     <Folder Include="Fundamentals\Interfaces\Other\IAppSessionContext\" />
   </ItemGroup>
 </Project>

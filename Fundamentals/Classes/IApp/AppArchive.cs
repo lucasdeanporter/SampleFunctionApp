@@ -1,4 +1,5 @@
-﻿using SampleFunctionApp.Fundamentals.Interfaces.IApp;
+﻿using SampleFunctionApp.Fundamentals.Classes.IGeneral;
+using SampleFunctionApp.Fundamentals.Interfaces.IApp;
 using SampleFunctionApp.Fundamentals.Interfaces.IData;
 using SampleFunctionApp.Fundamentals.Interfaces.IDo;
 using SampleFunctionApp.Fundamentals.Interfaces.ITime;
@@ -10,17 +11,19 @@ using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Classes.IApp
 {
-    internal class AppArchive : IAppArchive
+    public class AppArchive : IAppArchive, ITimeArchive
     {
 
-        AppArchive()
+        public AppArchive()
         {
-            Start = DateTime.Now;
-            RelateId = this.Start.ToString();
+            AppName = Globals.AppName;
+            AppSessionID = AppName + Globals.GenerateGUIDValue(); // Takes into account specific application instances rather than timestamps.
         }
 
-        public DateTime Start { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string AppSessionID { get; set; }
+        public string AppName { get; set; }
+        public DateTime Start { get; set; }
         public DateTime End { get; set; }
-        public string RelateId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string RelateId { get; set; }
     }
 }

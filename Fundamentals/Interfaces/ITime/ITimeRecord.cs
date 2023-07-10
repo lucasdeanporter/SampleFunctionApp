@@ -8,11 +8,14 @@ using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Interfaces.ITime
 {
-    internal interface ITimeRecord : IRecord
+    public interface ITimeRecord : IRecord
     {
-        public static DateTime StartTime;
-        public static DateTime EndTime;
-        public static DateTime GetTimeNow => DateTime.UtcNow
-        ITimeArchive timeArchive {get; set;}
+        public static DateTime GetTimeNow => DateTime.UtcNow;
+        public ITimeArchive timeArchive { get; set; }
+        public TimeSpan Duration { get; set; }
+        public bool HasEnd { get; set; }
+        public bool HasStart();
+        int GetDuration(string secondMinuteHourOrDay);
+        bool EndTimeExists();
     }
 }
