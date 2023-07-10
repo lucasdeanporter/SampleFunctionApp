@@ -1,6 +1,8 @@
-﻿namespace SampleFunctionApp.Fundamentals.Interfaces.ITime
+﻿using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
+
+namespace SampleFunctionApp.Fundamentals.Interfaces.ITime
 {
-    public interface ITimeLogic : ITime
+    public interface ITimeLogic : ILogic
     {
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleFunctionApp.Fundamentals.Interfaces.IApp.IAutoUpdate
+namespace SampleFunctionApp.Fundamentals.Interfaces
 {
-    internal class IAutoUpdateArchive
+    internal interface IFundamental
     {
     }
 }
