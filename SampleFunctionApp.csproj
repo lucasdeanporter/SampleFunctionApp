@@ -3,17 +3,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <AzureFunctionsVersion>v4</AzureFunctionsVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Remove="Classes\ILog\**" />
-    <Compile Remove="Fundamentals\Interfaces\IApp\IAppNetworkTests\**" />
-    <Compile Remove="Fundamentals\Interfaces\IContexts\**" />
-    <EmbeddedResource Remove="Classes\ILog\**" />
-    <EmbeddedResource Remove="Fundamentals\Interfaces\IApp\IAppNetworkTests\**" />
-    <EmbeddedResource Remove="Fundamentals\Interfaces\IContexts\**" />
-    <None Remove="Classes\ILog\**" />
-    <None Remove="Fundamentals\Interfaces\IApp\IAppNetworkTests\**" />
-    <None Remove="Fundamentals\Interfaces\IContexts\**" />
-  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.1.1" />
   </ItemGroup>
@@ -26,13 +16,5 @@
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\INetworkCanary\ICollect\" />
-    <Folder Include="Classes\INetworkCanary\IUpload\" />
-    <Folder Include="Classes\INetworkCanary\IPing\" />
-    <Folder Include="Classes\INetworkCanary\ITest\" />
-    <Folder Include="Fundamentals\Classes\ITime\" />
-    <Folder Include="Fundamentals\Features\ITime\" />
-    <Folder Include="Fundamentals\Interfaces\Other\IAppSessionContext\" />
-  </ItemGroup>
+ 
 </Project>
