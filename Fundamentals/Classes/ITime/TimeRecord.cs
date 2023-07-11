@@ -1,4 +1,5 @@
 ﻿using SampleFunctionApp.Fundamentals.Interfaces.IDo;
+using SampleFunctionApp.Fundamentals.Interfaces.IExecution;
 using SampleFunctionApp.Fundamentals.Interfaces.ITime;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,8 @@ namespace SampleFunctionApp.Fundamentals.Classes.ITime
         public ITimeArchive timeArchive { get; set; }
         public TimeSpan Duration { get; set; }
         public bool HasEnd { get; set; }
+        public IExecutionRecord executionRecord { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public bool HasStart()
         {
             if (timeArchive.Start.HasValue)
@@ -47,7 +50,7 @@ namespace SampleFunctionApp.Fundamentals.Classes.ITime
             }
         }
 
-        public void NotifyWriteFailure(dynamic wasWrite)
+        public bool NotifyWriteFailure(dynamic wasWrite)
         {
             throw new NotImplementedException(); // Todo: Implement logging here.
         }
@@ -58,14 +61,15 @@ namespace SampleFunctionApp.Fundamentals.Classes.ITime
             {
                 timeArchive.End = ITimeRecord.GetTimeNow;
                 HasEnd = true;
+                // does saving logic
                 return true;
             }
             catch
             {
                 try
                 {
-                    NotifyWriteFailure(toWrite);
-                    WriteFailure(toWrite);
+                    NotifyWriteFailure(this.timeArchive);
+                    HandleWriteFailure(this.timeArchive);
                     return true;
                 }
                 catch
@@ -76,7 +80,7 @@ namespace SampleFunctionApp.Fundamentals.Classes.ITime
             }
         }
 
-        public bool WriteFailure(dynamic toWrite)
+        public bool HandleWriteFailure(dynamic toWrite)
         {
             throw new NotImplementedException();
         }

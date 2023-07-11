@@ -2,7 +2,7 @@
 
 namespace SampleFunctionApp.Fundamentals.Interfaces.IFramework
 {
-    public interface IFramework : IFundamental
+    public interface IFramework
     {
         // How software logic will be defined within the code.
     }

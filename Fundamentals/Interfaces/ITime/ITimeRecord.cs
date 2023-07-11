@@ -10,7 +10,6 @@ namespace SampleFunctionApp.Fundamentals.Interfaces.ITime
 {
     public interface ITimeRecord : IRecord
     {
-        public static DateTime GetTimeNow => DateTime.UtcNow;
         public ITimeArchive timeArchive { get; set; }
         public TimeSpan Duration { get; set; }
         public bool HasEnd { get; set; }

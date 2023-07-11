@@ -1,5 +1,7 @@
 ﻿using SampleFunctionApp.Fundamentals.Interfaces.IApp;
 using SampleFunctionApp.Fundamentals.Interfaces.IDo;
+using SampleFunctionApp.Fundamentals.Interfaces.IExecution;
+using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
 using SampleFunctionApp.Fundamentals.Interfaces.ITime;
 using System;
 using System.Collections.Generic;
@@ -13,23 +15,21 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
     {
         AppRecord()
         {
-            appArchive = new AppArchive();
+
         }
-
-        public IAppArchive appArchive { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public ITimeRecord timeRecord { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        public void NotifyWriteFailure(dynamic wasWrite)
+        IAppArchive IAppRecord.appArchive { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        IExecutionRecord IRecord.executionRecord { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        bool IWrite.HandleWriteFailure(dynamic toWrite)
         {
             throw new NotImplementedException();
         }
 
-        public bool Write(dynamic toWrite)
+        bool IWrite.NotifyWriteFailure(dynamic wasWrite)
         {
             throw new NotImplementedException();
         }
 
-        public bool WriteFailure(dynamic toWrite)
+        bool IWrite.Write(dynamic toWrite)
         {
             throw new NotImplementedException();
         }

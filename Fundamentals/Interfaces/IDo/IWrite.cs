@@ -4,7 +4,7 @@
     {
         // Intended logic to save data in some manner.
         public bool Write(dynamic toWrite);
-        public bool WriteFailure(dynamic toWrite);
-        public void NotifyWriteFailure(dynamic wasWrite);
+        public bool HandleWriteFailure(dynamic toWrite);
+        public bool NotifyWriteFailure(dynamic wasWrite);
     }
 }
