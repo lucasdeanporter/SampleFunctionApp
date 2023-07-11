@@ -20,7 +20,7 @@ namespace SampleFunctionApp.Fundamentals.Classes.ITime
         public TimeArchive timeArchive { get; set; }
         public TimeSpan Duration { get; set; }
         public bool HasEnd { get; set; }
-        public ExecutionRecord executionRecord { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public ExecutionRecord executionRecord { get; set; }
 
         public bool HasStart()
         {

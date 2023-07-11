@@ -15,7 +15,6 @@ namespace SampleFunctionApp.Fundamentals.Classes.ITime
             Start = null;
         }
         public DateTime End { get; set; }
-        public string RelateId { get; set; }
         public DateTime relateId { get; set; }
         public DateTime? Start { get; set; }
     }

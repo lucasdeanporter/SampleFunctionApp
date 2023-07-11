@@ -33,7 +33,7 @@ namespace SampleFunctionApp
 
             IAppLogic appLogic = new AppLogic();
 
-            return new OkObjectResult(responseMessage);
+            return new OkObjectResult(appLogic);
         }
     }
 }
