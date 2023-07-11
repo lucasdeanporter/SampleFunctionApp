@@ -1,4 +1,5 @@
-﻿using SampleFunctionApp.Fundamentals.Interfaces.ITime;
+﻿using Microsoft.Extensions.Logging.Abstractions;
+using SampleFunctionApp.Fundamentals.Interfaces.ITime;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Classes.ITime
 {
-    internal class TimeArchive : ITimeArchive
+    public class TimeArchive : ITimeArchive
     {
         public TimeArchive() 
         {
-            Start = ITimeRecord.GetTimeNow;
-            RelateId = this.Start.ToString();
+            Start = null;
         }
-        public DateTime? Start = null;
         public DateTime End { get; set; }
         public string RelateId { get; set; }
+        public DateTime relateId { get; set; }
+        public DateTime? Start { get; set; }
     }
 }

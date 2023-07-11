@@ -1,4 +1,5 @@
-﻿using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
+﻿using SampleFunctionApp.Fundamentals.Classes.IApp;
+using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace SampleFunctionApp.Fundamentals.Interfaces.IApp
 {
     public interface IAppLogic : ILogic
     {
-        IAppLogicRecord appLogicRecord { get; set; }
+        public AppLogicRecord appLogicRecord { get; set; }
     }
 }

@@ -7,6 +7,8 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using SampleFunctionApp.Fundamentals.Interfaces.IApp;
+using SampleFunctionApp.Fundamentals.Classes.IApp;
 
 namespace SampleFunctionApp
 {
@@ -28,6 +30,8 @@ namespace SampleFunctionApp
             string responseMessage = string.IsNullOrEmpty(name)
                 ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
                 : $"Hello, {name}. This HTTP triggered function executed successfully.";
+
+            IAppLogic appLogic = new AppLogic();
 
             return new OkObjectResult(responseMessage);
         }

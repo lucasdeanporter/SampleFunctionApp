@@ -8,23 +8,38 @@ using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Classes.IExecution
 {
-    internal class ExecutionRecord : IExecutionRecord
+    public class ExecutionRecord : IExecutionRecord
     {
-        public IExecutionRecord executionRecord { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public IExecutionArchive executionArchive { get; set; }
 
         public bool HandleWriteFailure(dynamic toWrite)
         {
-            throw new NotImplementedException();
+            return false;
         }
 
         public bool NotifyWriteFailure(dynamic wasWrite)
         {
-            throw new NotImplementedException();
+            return false;
         }
 
         public bool Write(dynamic toWrite)
         {
-            throw new NotImplementedException();
+            return false;
+        }
+
+        public bool HandleWriteFailure(IExecutionArchive toWrite)
+        {
+            return false;
+        }
+
+        public bool NotifyWriteFailure(IExecutionArchive wasWrite)
+        {
+            return false;
+        }
+
+        public bool Write(IExecutionArchive toWrite)
+        {
+            return false;
         }
     }
 }

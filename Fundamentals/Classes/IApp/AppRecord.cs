@@ -13,25 +13,37 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
 {
     public class AppRecord : IAppRecord
     {
-        AppRecord()
-        {
+        public AppArchive appArchive { get; set; }
 
-        }
-        IAppArchive IAppRecord.appArchive { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        IExecutionRecord IRecord.executionRecord { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        bool IWrite.HandleWriteFailure(dynamic toWrite)
+        public bool HandleWriteFailure(dynamic toWrite)
         {
-            throw new NotImplementedException();
+            return false;
         }
 
-        bool IWrite.NotifyWriteFailure(dynamic wasWrite)
+        public bool NotifyWriteFailure(dynamic wasWrite)
         {
-            throw new NotImplementedException();
+            return false;
         }
 
-        bool IWrite.Write(dynamic toWrite)
+        public bool Write(dynamic toWrite)
         {
-            throw new NotImplementedException();
+            return false;
+        }
+
+
+        bool HandleWriteFailure(IAppArchive toWrite)
+        {
+            return false;
+        }
+
+        bool NotifyWriteFailure(IAppArchive wasWrite)
+        {
+            return false;
+        }
+
+        bool Write(IAppArchive toWrite)
+        {
+            return false;
         }
     }
 }

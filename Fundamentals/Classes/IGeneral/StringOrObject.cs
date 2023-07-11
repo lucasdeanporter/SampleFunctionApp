@@ -2,7 +2,7 @@
 
 namespace SampleFunctionApp.Fundamentals.Classes.IGeneral
 {
-    public class StringOrObject : IGeneral
+    public class StringOrObject
     {
         public string Str = null;
         public object Obj = null;

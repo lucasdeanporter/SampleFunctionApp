@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Interfaces
 {
-    internal interface IFundamental
+    public interface IFundamental
     {
     }
 }

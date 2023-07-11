@@ -1,4 +1,6 @@
-﻿using SampleFunctionApp.Fundamentals.Interfaces.IDo;
+﻿using SampleFunctionApp.Fundamentals.Classes.IExecution;
+using SampleFunctionApp.Fundamentals.Classes.IGeneral;
+using SampleFunctionApp.Fundamentals.Interfaces.IDo;
 using SampleFunctionApp.Fundamentals.Interfaces.IExecution;
 using SampleFunctionApp.Fundamentals.Interfaces.ITime;
 using System;
@@ -9,17 +11,16 @@ using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Classes.ITime
 {
-    internal class TimeRecord : ITimeRecord
+    public class TimeRecord : ITimeRecord
     {
-        TimeRecord()
+        public TimeRecord()
         {
-            timeArchive = new TimeArchive();
             HasEnd = false;
         }
-        public ITimeArchive timeArchive { get; set; }
+        public TimeArchive timeArchive { get; set; }
         public TimeSpan Duration { get; set; }
         public bool HasEnd { get; set; }
-        public IExecutionRecord executionRecord { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public ExecutionRecord executionRecord { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public bool HasStart()
         {
@@ -50,16 +51,18 @@ namespace SampleFunctionApp.Fundamentals.Classes.ITime
             }
         }
 
-        public bool NotifyWriteFailure(dynamic wasWrite)
+
+        public bool NotifyWriteFailure(ITimeArchive wasWrite)
         {
             throw new NotImplementedException(); // Todo: Implement logging here.
         }
 
-        public bool Write(dynamic toWrite)
+        public bool Write(ITimeArchive toWrite)
         {
+            // Todo: Fix scoping from Logic to here.
             try
             {
-                timeArchive.End = ITimeRecord.GetTimeNow;
+                toWrite.End = Globals.GetTimeNow();
                 HasEnd = true;
                 // does saving logic
                 return true;
@@ -68,8 +71,8 @@ namespace SampleFunctionApp.Fundamentals.Classes.ITime
             {
                 try
                 {
-                    NotifyWriteFailure(this.timeArchive);
-                    HandleWriteFailure(this.timeArchive);
+                    NotifyWriteFailure(toWrite);
+                    HandleWriteFailure(toWrite);
                     return true;
                 }
                 catch
@@ -80,9 +83,25 @@ namespace SampleFunctionApp.Fundamentals.Classes.ITime
             }
         }
 
+        public bool HandleWriteFailure(ITimeArchive toWrite)
+        {
+            return false;
+        }
+
         public bool HandleWriteFailure(dynamic toWrite)
         {
-            throw new NotImplementedException();
+            return false;
         }
+
+        public bool NotifyWriteFailure(dynamic wasWrite)
+        {
+            return false;
+        }
+
+        public bool Write(dynamic toWrite)
+        {
+            return false;
+        }
+
     }
 }

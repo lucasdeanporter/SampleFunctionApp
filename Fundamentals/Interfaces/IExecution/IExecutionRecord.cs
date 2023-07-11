@@ -9,5 +9,6 @@ namespace SampleFunctionApp.Fundamentals.Interfaces.IExecution
 {
     public interface IExecutionRecord : IRecord
     {
+        IExecutionArchive executionArchive { get; set; }
     }
 }

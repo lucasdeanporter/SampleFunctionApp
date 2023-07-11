@@ -10,13 +10,13 @@ namespace SampleFunctionApp.Fundamentals.Classes.IExecution
 {
     internal class ExecutionArchive : IExecutionArchive
     {
-        public DateTime relateId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool HasNetwork { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool HasUser { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool HasError { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public List<string> Steps { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public List<object> Result { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime? Start { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime End { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DateTime relateId { get; set; }
+        public bool HasNetwork { get; set; }
+        public bool HasUser { get; set; }
+        public bool HasError { get; set; }
+        public List<string> Steps { get; set; }
+        public List<object> Result { get; set; }
+        public DateTime? Start { get; set; }
+        public DateTime End { get; set; }
     }
 }

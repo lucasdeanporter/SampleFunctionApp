@@ -1,4 +1,6 @@
-﻿using SampleFunctionApp.Fundamentals.Interfaces.IExecution;
+﻿using SampleFunctionApp.Fundamentals.Classes.IApp;
+using SampleFunctionApp.Fundamentals.Classes.ITime;
+using SampleFunctionApp.Fundamentals.Interfaces.IExecution;
 using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
 using SampleFunctionApp.Fundamentals.Interfaces.ITime;
 using System;
@@ -11,7 +13,7 @@ namespace SampleFunctionApp.Fundamentals.Interfaces.IApp
 {
     public interface IAppLogicRecord : ILogicRecord
     {
-        public IAppRecord appRecord { get; set; }
-        public ITimeRecord timeRecord { get; set; }
+        public AppRecord appRecord { get; set; }
+        public TimeRecord timeRecord { get; set; }
     }
 }

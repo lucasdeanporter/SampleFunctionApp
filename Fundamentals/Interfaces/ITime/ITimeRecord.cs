@@ -1,4 +1,5 @@
-﻿using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
+﻿using SampleFunctionApp.Fundamentals.Classes.ITime;
+using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,11 +11,11 @@ namespace SampleFunctionApp.Fundamentals.Interfaces.ITime
 {
     public interface ITimeRecord : IRecord
     {
-        public ITimeArchive timeArchive { get; set; }
+        public TimeArchive timeArchive { get; set; }
         public TimeSpan Duration { get; set; }
         public bool HasEnd { get; set; }
         public bool HasStart();
-        int GetDuration(string secondMinuteHourOrDay);
-        bool EndTimeExists();
+        public int GetDuration(string secondMinuteHourOrDay);
+        public bool EndTimeExists();
     }
 }
