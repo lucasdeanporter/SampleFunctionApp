@@ -9,6 +9,7 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
 {
     public class AppLogic : IAppLogic
     {
+        // Todo: Reduce duplication of information only if it makes it simpler. Duplication of data is to be expected because these are designs for backend data.
         public AppLogic()
         {
             //Console.WriteLine("Starting");
