@@ -1,13 +1,8 @@
 ﻿using SampleFunctionApp.Fundamentals.Classes.IExecution;
 using SampleFunctionApp.Fundamentals.Classes.IGeneral;
-using SampleFunctionApp.Fundamentals.Interfaces.IDo;
 using SampleFunctionApp.Fundamentals.Interfaces.IExecution;
 using SampleFunctionApp.Fundamentals.Interfaces.ITime;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Classes.ITime
 {
@@ -17,10 +12,10 @@ namespace SampleFunctionApp.Fundamentals.Classes.ITime
         {
             HasEnd = false;
         }
-        public TimeArchive timeArchive { get; set; }
+        public ITimeArchive timeArchive { get; set; }
         public TimeSpan Duration { get; set; }
         public bool HasEnd { get; set; }
-        public ExecutionRecord executionRecord { get; set; }
+        public IExecutionRecord executionRecord { get; set; }
 
         public bool HasStart()
         {

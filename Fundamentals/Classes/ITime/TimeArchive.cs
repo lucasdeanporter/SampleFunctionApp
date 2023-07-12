@@ -1,10 +1,5 @@
-﻿using Microsoft.Extensions.Logging.Abstractions;
-using SampleFunctionApp.Fundamentals.Interfaces.ITime;
+﻿using SampleFunctionApp.Fundamentals.Interfaces.ITime;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Classes.ITime
 {

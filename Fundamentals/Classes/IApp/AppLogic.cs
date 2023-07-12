@@ -3,6 +3,7 @@ using SampleFunctionApp.Fundamentals.Classes.IGeneral;
 using SampleFunctionApp.Fundamentals.Classes.ITime;
 using SampleFunctionApp.Fundamentals.Interfaces.IApp;
 using SampleFunctionApp.Fundamentals.Interfaces.IExecution;
+
 using System;
 
 namespace SampleFunctionApp.Fundamentals.Classes.IApp
@@ -18,23 +19,21 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
             appLogicRecord.appRecord = new AppRecord();
             appLogicRecord.appRecord.appArchive = new AppArchive();
             appLogicRecord.appRecord.appArchive.relateId = relateId;
-            appLogicRecord.appRecord.appArchive.Start = Globals.GetTimeNow();
 
             executionRecord = new ExecutionRecord();
             executionRecord.executionArchive = new ExecutionArchive();
             executionRecord.executionArchive.relateId = relateId;
-            executionRecord.executionArchive.Start = Globals.GetTimeNow();
 
-            appLogicRecord.timeRecord = new TimeRecord();
-            appLogicRecord.timeRecord.timeArchive = new TimeArchive();
-            appLogicRecord.timeRecord.timeArchive.relateId = relateId;
-            appLogicRecord.timeRecord.timeArchive.Start = Globals.GetTimeNow();
+            executionRecord.timeRecord = new TimeRecord();
+            executionRecord.timeRecord.timeArchive = new TimeArchive();
+            executionRecord.timeRecord.timeArchive.relateId = relateId;
+            executionRecord.timeRecord.timeArchive.Start = Globals.GetTimeNow();
 
             //Console.WriteLine("appLogicRecord", appLogicRecord);
         }
 
-        public AppLogicRecord appLogicRecord { get; set; }
-        public ExecutionRecord executionRecord { get; set; }
+        public IAppLogicRecord appLogicRecord { get; set; }
+        public IExecutionRecord executionRecord { get; set; }
         public DateTime relateId { get; set; }
     }
 }

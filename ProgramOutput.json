@@ -1,0 +1,32 @@
+{
+  "appLogicRecord": {
+    "appRecord": {
+      "appArchive": {
+        "appName": "Application Telescope",
+        "relateId": "2023-07-12T00:14:46.8096671Z"
+      }
+    },
+    "executionRecord": null
+  },
+  "executionRecord": {
+    "executionArchive": {
+      "relateId": "2023-07-12T00:14:46.8096671Z",
+      "hasNetwork": false,
+      "hasUser": false,
+      "hasError": false,
+      "steps": null,
+      "result": null
+    },
+    "timeRecord": {
+      "timeArchive": {
+        "end": "0001-01-01T00:00:00",
+        "relateId": "2023-07-12T00:14:46.8096671Z",
+        "start": "2023-07-12T00:14:46.8096866Z"
+      },
+      "duration": "00:00:00",
+      "hasEnd": false,
+      "executionRecord": null
+    }
+  },
+  "relateId": "2023-07-12T00:14:46.8096671Z"
+}

@@ -1,16 +1,12 @@
 ﻿using SampleFunctionApp.Fundamentals.Interfaces.IExecution;
-using SampleFunctionApp.Fundamentals.Interfaces.IFramework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SampleFunctionApp.Fundamentals.Interfaces.ITime;
 
 namespace SampleFunctionApp.Fundamentals.Classes.IExecution
 {
     public class ExecutionRecord : IExecutionRecord
     {
         public IExecutionArchive executionArchive { get; set; }
+        public ITimeRecord timeRecord { get; set; }
 
         public bool HandleWriteFailure(dynamic toWrite)
         {

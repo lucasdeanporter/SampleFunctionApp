@@ -1,5 +1,4 @@
-﻿
-namespace SampleFunctionApp.Fundamentals.Interfaces.IFramework
+﻿namespace SampleFunctionApp.Fundamentals.Interfaces.IFramework
 {
     public interface IFramework : IFundamental
     {
