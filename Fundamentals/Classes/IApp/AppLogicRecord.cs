@@ -1,13 +1,36 @@
 ﻿using SampleFunctionApp.Fundamentals.Interfaces.IApp;
 using SampleFunctionApp.Fundamentals.Interfaces.IExecution;
 using SampleFunctionApp.Fundamentals.Interfaces.ITime;
+using System.Net.Http;
+using System.Net.Http.Json;
+using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Classes.IApp
 {
     public class AppLogicRecord : IAppLogicRecord
     {
+        IHttpClientFactory httpClientFactory = null;
+        public AppLogicRecord(IHttpClientFactory httpClientFactory, IAppRecord appRecord) 
+        {
+            this.httpClientFactory = httpClientFactory;
+            this.appRecord = appRecord;
+        }
+        Task<dynamic> rawForm = null;
         public IAppRecord appRecord { get; set; }
         public IExecutionRecord executionRecord { get; set; }
+
+        public async Task<dynamic> PingTest(string url)
+        {
+            using HttpClient client = httpClientFactory.CreateClient();
+            try
+            {
+                return await client.GetAsync(url);
+            }
+            catch
+            {
+                return null;
+            }
+        }
 
         public bool HandleWriteFailure(dynamic toWrite)
         {

@@ -4,7 +4,13 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
 {
     public class AppRecord : IAppRecord
     {
+        public AppRecord(IAppArchive appArchive) 
+        {
+            this.appArchive = appArchive;
+        }
         public IAppArchive appArchive { get; set; }
+
+        public string test = "testing";
 
         public bool HandleWriteFailure(dynamic toWrite)
         {

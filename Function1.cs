@@ -17,7 +17,7 @@ namespace SampleFunctionApp
         [FunctionName("Function1")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
-            ILogger log)
+            ILogger log, AppLogic appLogic)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
@@ -31,9 +31,12 @@ namespace SampleFunctionApp
                 ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
                 : $"Hello, {name}. This HTTP triggered function executed successfully.";
 
-            IAppLogic appLogic = new AppLogic();
 
-            return new OkObjectResult(appLogic);
+            ValueTask<dynamic> taskResult = await appLogic.PingTest();
+
+            return new OkObjectResult(taskResult);
         }
+
+
     }
 }
