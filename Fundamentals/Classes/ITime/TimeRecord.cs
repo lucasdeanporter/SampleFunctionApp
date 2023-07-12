@@ -8,11 +8,15 @@ namespace SampleFunctionApp.Fundamentals.Classes.ITime
 {
     public class TimeRecord : ITimeRecord
     {
-        public TimeRecord()
+        Globals globals;
+
+        public ITimeArchive timeArchive { get; set; }
+
+        public TimeRecord(ITimeArchive timeArchive, Globals globals)
         {
             HasEnd = false;
+            this.timeArchive = timeArchive;
         }
-        public ITimeArchive timeArchive { get; set; }
         public TimeSpan Duration { get; set; }
         public bool HasEnd { get; set; }
         public IExecutionRecord executionRecord { get; set; }
@@ -57,7 +61,7 @@ namespace SampleFunctionApp.Fundamentals.Classes.ITime
             // Todo: Fix scoping from Logic to here.
             try
             {
-                toWrite.End = Globals.GetTimeNow();
+                toWrite.End = globals.GetTimeNow();
                 HasEnd = true;
                 // does saving logic
                 return true;

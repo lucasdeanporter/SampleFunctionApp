@@ -1,7 +1,12 @@
 ﻿using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using SampleFunctionApp.Fundamentals.Classes.IApp;
+using SampleFunctionApp.Fundamentals.Classes.IExecution;
+using SampleFunctionApp.Fundamentals.Classes.IGeneral;
+using SampleFunctionApp.Fundamentals.Classes.ITime;
 using SampleFunctionApp.Fundamentals.Interfaces.IApp;
+using SampleFunctionApp.Fundamentals.Interfaces.IExecution;
+using SampleFunctionApp.Fundamentals.Interfaces.ITime;
 
 // TODO: Async challenges, not a challenge: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios#wait-for-multiple-tasks-to-complete
 // https://en.wikipedia.org/wiki/Referential_transparency
@@ -18,10 +23,18 @@ namespace SampleFunctionApp
         {
         // https://learn.microsoft.com/en-us/dotnet/core/extensions/httpclient-factory#basic-usage
             builder.Services.AddHttpClient();
-            builder.Services.AddSingleton<IAppLogic, AppLogic>();
-            builder.Services.AddSingleton<IAppLogicRecord, AppLogicRecord>();
-            builder.Services.AddSingleton<IAppRecord, AppRecord>();
-            builder.Services.AddSingleton<IAppArchive, AppArchive>();
+            builder.Services.AddTransient<IAppLogic, AppLogic>();
+            builder.Services.AddTransient<IAppLogicRecord, AppLogicRecord>();
+            builder.Services.AddTransient<IAppRecord, AppRecord>();
+            builder.Services.AddTransient<IAppArchive, AppArchive>();
+
+            builder.Services.AddTransient<IExecutionRecord, ExecutionRecord>();
+            builder.Services.AddTransient<IExecutionArchive, ExecutionArchive>();
+
+            builder.Services.AddTransient<ITimeRecord, TimeRecord>();
+            builder.Services.AddTransient<ITimeArchive, TimeArchive>();
+
+            builder.Services.AddSingleton<Globals>();
             /*
             builder.Services.AddHttpClient();
 

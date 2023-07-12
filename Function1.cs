@@ -9,9 +9,35 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using SampleFunctionApp.Fundamentals.Interfaces.IApp;
 using SampleFunctionApp.Fundamentals.Classes.IApp;
-
+using SampleFunctionApp.Fundamentals.Interfaces.Concepts;
+using System.Net.Http;
 namespace SampleFunctionApp
 {
+    public class Function1
+    {
+        private readonly HttpClient _client;
+        IAppLogic appLogic;
+
+        public Function1(IHttpClientFactory httpClientFactory, IAppLogic appLogic)
+        {
+            this._client = httpClientFactory.CreateClient();
+            this.appLogic = appLogic;
+        }
+
+        [FunctionName("Function1")]
+        public async Task<IActionResult> Run(
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
+            ILogger log)
+        {
+            var response = await _client.GetAsync("https://microsoft.com");
+            var message = appLogic.PingTest();
+
+            return new OkObjectResult(appLogic);
+            //return new OkObjectResult(message);
+        }
+    }
+}
+/*
     public static class Function1
     {
         [FunctionName("Function1")]
@@ -40,3 +66,4 @@ namespace SampleFunctionApp
 
     }
 }
+*/

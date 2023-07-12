@@ -2,9 +2,10 @@
 
 namespace SampleFunctionApp.Fundamentals.Classes.IGeneral
 {
-    public static class Globals
+    public class Globals
     {
-        public static DateTime GetTimeNow()
+        DateTime relateId;
+        public DateTime GetTimeNow()
         {
             return DateTime.UtcNow;
         }

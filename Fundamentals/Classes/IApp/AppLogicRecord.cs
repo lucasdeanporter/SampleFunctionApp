@@ -9,16 +9,20 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
 {
     public class AppLogicRecord : IAppLogicRecord
     {
-        IHttpClientFactory httpClientFactory = null;
-        public AppLogicRecord(IHttpClientFactory httpClientFactory, IAppRecord appRecord) 
+        IHttpClientFactory httpClientFactory;
+        public AppLogicRecord(IHttpClientFactory httpClientFactory, IAppRecord appRecord, IExecutionRecord executionRecord, ITimeRecord timeRecord) 
         {
             this.httpClientFactory = httpClientFactory;
             this.appRecord = appRecord;
+            this.executionRecord = executionRecord;
+            this.timeRecord = timeRecord;
+            this.executionRecord.executionArchive.HasNetwork = true;
+
         }
-        Task<dynamic> rawForm = null;
+
+        public ITimeRecord timeRecord { get; set; }
         public IAppRecord appRecord { get; set; }
         public IExecutionRecord executionRecord { get; set; }
-
         public async Task<dynamic> PingTest(string url)
         {
             using HttpClient client = httpClientFactory.CreateClient();
@@ -58,21 +62,6 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
         }
 
         public bool Write(IAppRecord toWrite)
-        {
-            return false;
-        }
-
-        public bool HandleWriteFailure(ITimeRecord toWrite)
-        {
-            return false;
-        }
-
-        public bool NotifyWriteFailure(ITimeRecord wasWrite)
-        {
-            return false;
-        }
-
-        public bool Write(ITimeRecord toWrite)
         {
             return false;
         }
