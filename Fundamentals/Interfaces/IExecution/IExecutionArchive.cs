@@ -10,7 +10,6 @@ namespace SampleFunctionApp.Fundamentals.Interfaces.IExecution
         public bool HasError { get; set; }
 
         public List<string> Steps { get; set; }
-        public List<object> Result { get; set; }
 
     }
 }

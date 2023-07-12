@@ -11,6 +11,5 @@ namespace SampleFunctionApp.Fundamentals.Classes.IExecution
         public bool HasUser { get; set; }
         public bool HasError { get; set; }
         public List<string> Steps { get; set; }
-        public List<object> Result { get; set; }
     }
 }
