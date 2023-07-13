@@ -8,6 +8,6 @@ namespace SampleFunctionApp.Fundamentals.Interfaces.IApp
     {
         public IAppLogicRecord appLogicRecord { get; set; }
         public IExecutionLogic executionLogic { get; set; }
-        public ValueTask<dynamic> PingTest();
+        public ValueTask<dynamic> PingTest(string url);
     }
 }

@@ -12,6 +12,7 @@ namespace SampleFunctionApp.Fundamentals.Classes.IExecution
         public DateTime appRelateId { get => globalsArchive.appRelateId; }
         public DateTime executionId { get; set; }
         public bool HasNetwork { get; set; }
+        public string networkURL { get; set; }
         public bool HasUser { get; set; }
         public bool HasError { get; set; }
         public List<string> Steps { get; set; }

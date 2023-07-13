@@ -13,6 +13,7 @@ namespace SampleFunctionApp.Fundamentals.Interfaces.IExecution
         public DateTime executionId { get; set; }
         public bool Start();
         public bool Stop();
+        public bool SetNetwork(string url);
 
     }
 }

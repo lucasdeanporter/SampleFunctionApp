@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace SampleFunctionApp.Fundamentals.Classes.IApp
 {
     public class AppLogic : IAppLogic
-    {        
+    {
         public AppLogic(IAppLogicRecord appLogicRecord, IExecutionLogic executionLogic, GlobalsArchive globals)
         {
             appRelateId = globals.GetTimeNow();
@@ -20,13 +20,12 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
             this.appLogicRecord = appLogicRecord;
 
             this.executionLogic.Stop();
-            // Todo simplify and refactor
-            //executionLogic.ExecutionLogicRecord.executionRecord.executionArchive.HasNetwork = true;
         }
 
-        public async ValueTask<dynamic> PingTest()
+        public async ValueTask<dynamic> PingTest(string url)
         {
-            return await appLogicRecord.PingTest("http://microsoft.com");
+            this.executionLogic.SetNetwork(url);
+            return await appLogicRecord.PingTest(url);
         }
 
         public IAppLogicRecord appLogicRecord { get; set; }
