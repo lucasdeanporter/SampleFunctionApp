@@ -10,8 +10,6 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
         }
         public IAppArchive appArchive { get; set; }
 
-        public string test = "testing";
-
         public bool HandleWriteFailure(dynamic toWrite)
         {
             return false;
