@@ -19,18 +19,23 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
         public AppLogic(IAppLogicRecord appLogicRecord, IExecutionRecord executionRecord, GlobalsArchive globals)
         {
             //Console.WriteLine("Starting");
-            relateId = globals.GetTimeNow(); // set time in logic to set to records to correlate later in data.
-            
+            appRelateId = globals.GetTimeNow();
+            globals.appRelateId = appRelateId;
+
             this.appLogicRecord = appLogicRecord;
+
+            executionLogic.executionId = globals.GetTimeNow();
+            executionLogic.ExecutionLogicRecord.timeRecord.timeArchive.Start = executionLogic.executionId;
+            /*
             this.executionRecord = executionRecord;
             this.executionRecord.executionArchive.HasNetwork = false;
             this.executionRecord.executionArchive.relateId = relateId;
+            */
 
-            appLogicRecord.appRecord.appArchive.relateId = relateId;
-            appLogicRecord.timeRecord.timeArchive.relateId = relateId;
-            appLogicRecord.executionRecord.executionArchive.relateId = relateId;
+            //appLogicRecord.timeRecord.timeArchive.relateId = relateId;
+            //appLogicRecord.executionRecord.executionArchive.relateId = relateId;
 
-            appLogicRecord.timeRecord.timeArchive.Start = globals.GetTimeNow();
+            //appLogicRecord.timeRecord.timeArchive.Start = globals.GetTimeNow();
 
             //Console.WriteLine("appLogicRecord", appLogicRecord);
         }
@@ -41,7 +46,7 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
         }
 
         public IAppLogicRecord appLogicRecord { get; set; }
-        public IExecutionRecord executionRecord { get; set; }
-        public DateTime relateId { get; set; }
+        public DateTime appRelateId { get; set; }
+        public IExecutionLogic executionLogic { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }

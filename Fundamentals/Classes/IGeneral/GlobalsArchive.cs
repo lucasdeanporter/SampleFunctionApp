@@ -4,15 +4,15 @@ namespace SampleFunctionApp.Fundamentals.Classes.IGeneral
 {
     public class GlobalsArchive
     {
-        DateTime relateId;
+        public DateTime appRelateId;
         public DateTime GetTimeNow()
         {
             return DateTime.UtcNow;
         }
-        public static string ProjectFileRelativePath = "relative/path";
-        private static Guid Guid = Guid.NewGuid();
-        public static string AppName = "Application Telescope";
-        public static string GenerateGUIDValue()
+        public string ProjectFileRelativePath = "relative/path";
+        private Guid Guid = Guid.NewGuid();
+        public string AppName = "Application Telescope";
+        public string GenerateGUIDValue()
         {
             return Guid.ToString();
         }

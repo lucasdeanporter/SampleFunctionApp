@@ -12,6 +12,7 @@ namespace SampleFunctionApp.Fundamentals.Classes.IExecution
         public IExecutionRecord executionRecord { get; set; }
 
         public DateTime executionId { get; set; }
-        public DateTime relateId { get; set; }
+        public DateTime appRelateId { get; set; }
+        public IExecutionLogicRecord ExecutionLogicRecord { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }
