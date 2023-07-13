@@ -19,8 +19,6 @@ namespace SampleFunctionApp.Fundamentals.Classes.ITime
         }
         public TimeSpan Duration { get; set; }
         public bool HasEnd { get; set; }
-        public IExecutionRecord executionRecord { get; set; }
-
         public bool HasStart()
         {
             if (timeArchive.Start.HasValue)
