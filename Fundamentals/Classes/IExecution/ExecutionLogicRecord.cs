@@ -10,8 +10,8 @@ namespace SampleFunctionApp.Fundamentals.Classes.IExecution
 {
     internal class ExecutionLogicRecord : IExecutionLogicRecord
     {
-        public IExecutionRecord executionRecord { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public ITimeRecord timeRecord { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public IExecutionRecord executionRecord { get; set; }
+        public ITimeRecord timeRecord { get; set; }
 
         public ExecutionLogicRecord(IExecutionRecord executionRecord, ITimeRecord timeRecord) 
         {
@@ -20,17 +20,17 @@ namespace SampleFunctionApp.Fundamentals.Classes.IExecution
         }
         public bool HandleWriteFailure(dynamic toWrite)
         {
-            throw new NotImplementedException();
+            return false;
         }
 
         public bool NotifyWriteFailure(dynamic wasWrite)
         {
-            throw new NotImplementedException();
+            return false;
         }
 
         public bool Write(dynamic toWrite)
         {
-            throw new NotImplementedException();
+            return false;
         }
 
 

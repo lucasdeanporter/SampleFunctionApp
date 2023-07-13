@@ -16,17 +16,17 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
 
         // Todo: Reduce duplication of information only if it makes it simpler. Duplication of data is to be expected because these are designs for backend data.
         
-        public AppLogic(IAppLogicRecord appLogicRecord, GlobalsArchive globals)
+        public AppLogic(IAppLogicRecord appLogicRecord, IExecutionLogic executionLogic, GlobalsArchive globals)
         {
             appRelateId = globals.GetTimeNow();
             globals.appRelateId = appRelateId;
 
             this.appLogicRecord = appLogicRecord;
 
-            executionLogic.executionId = globals.GetTimeNow();
+            this.executionLogic = executionLogic;
+            this.executionLogic.Start();
             // Todo simplify and refactor
-            executionLogic.ExecutionLogicRecord.timeRecord.timeArchive.Start = executionLogic.executionId;
-            executionLogic.ExecutionLogicRecord.executionRecord.executionArchive.HasNetwork = true;
+            //executionLogic.ExecutionLogicRecord.executionRecord.executionArchive.HasNetwork = true;
         }
 
         public async ValueTask<dynamic> PingTest()
@@ -36,6 +36,6 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
 
         public IAppLogicRecord appLogicRecord { get; set; }
         public DateTime appRelateId { get; set; }
-        public IExecutionLogic executionLogic { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public IExecutionLogic executionLogic { get; set; }
     }
 }

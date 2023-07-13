@@ -9,8 +9,9 @@ namespace SampleFunctionApp.Fundamentals.Interfaces.IExecution
 {
     public interface IExecutionLogic : ILogic
     {
-        public IExecutionLogicRecord ExecutionLogicRecord { get; set; }
+        public IExecutionLogicRecord executionLogicRecord { get; set; }
         public DateTime executionId { get; set; }
+        public bool Start();
 
     }
 }

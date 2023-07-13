@@ -28,6 +28,8 @@ namespace SampleFunctionApp
             builder.Services.AddTransient<IAppRecord, AppRecord>();
             builder.Services.AddTransient<IAppArchive, AppArchive>();
 
+            builder.Services.AddTransient<IExecutionLogic, ExecutionLogic>();
+            builder.Services.AddTransient<IExecutionLogicRecord, ExecutionLogicRecord>();
             builder.Services.AddTransient<IExecutionRecord, ExecutionRecord>();
             builder.Services.AddTransient<IExecutionArchive, ExecutionArchive>();
 
