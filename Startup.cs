@@ -34,7 +34,7 @@ namespace SampleFunctionApp
             builder.Services.AddTransient<ITimeRecord, TimeRecord>();
             builder.Services.AddTransient<ITimeArchive, TimeArchive>();
 
-            builder.Services.AddSingleton<Globals>();
+            builder.Services.AddSingleton<GlobalsArchive>();
             /*
             builder.Services.AddHttpClient();
 

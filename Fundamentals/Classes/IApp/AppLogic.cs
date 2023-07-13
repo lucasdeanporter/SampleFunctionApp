@@ -15,7 +15,8 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
     {
 
         // Todo: Reduce duplication of information only if it makes it simpler. Duplication of data is to be expected because these are designs for backend data.
-        public AppLogic(IAppLogicRecord appLogicRecord, IExecutionRecord executionRecord, Globals globals)
+        
+        public AppLogic(IAppLogicRecord appLogicRecord, IExecutionRecord executionRecord, GlobalsArchive globals)
         {
             //Console.WriteLine("Starting");
             relateId = globals.GetTimeNow(); // set time in logic to set to records to correlate later in data.

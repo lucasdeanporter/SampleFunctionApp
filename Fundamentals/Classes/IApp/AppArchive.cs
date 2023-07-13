@@ -6,7 +6,7 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
 {
     public class AppArchive : IAppArchive
     {
-        public string AppName { get => Globals.AppName; }
+        public string AppName { get => GlobalsArchive.AppName; }
         public DateTime relateId { get; set; }
     }
 }

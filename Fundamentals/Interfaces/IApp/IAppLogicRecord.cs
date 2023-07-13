@@ -8,8 +8,6 @@ namespace SampleFunctionApp.Fundamentals.Interfaces.IApp
     public interface IAppLogicRecord : ILogicRecord
     {
         public IAppRecord appRecord { get; set; }
-        public IExecutionRecord executionRecord { get; set; }
-        ITimeRecord timeRecord { get; set; }
         public Task<dynamic> PingTest(string url);
     }
 }

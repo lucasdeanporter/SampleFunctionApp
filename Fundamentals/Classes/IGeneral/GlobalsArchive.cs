@@ -2,7 +2,7 @@
 
 namespace SampleFunctionApp.Fundamentals.Classes.IGeneral
 {
-    public class Globals
+    public class GlobalsArchive
     {
         DateTime relateId;
         public DateTime GetTimeNow()

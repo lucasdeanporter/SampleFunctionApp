@@ -8,11 +8,11 @@ namespace SampleFunctionApp.Fundamentals.Classes.ITime
 {
     public class TimeRecord : ITimeRecord
     {
-        Globals globals;
+        GlobalsArchive globals;
 
         public ITimeArchive timeArchive { get; set; }
 
-        public TimeRecord(ITimeArchive timeArchive, Globals globals)
+        public TimeRecord(ITimeArchive timeArchive, GlobalsArchive globals)
         {
             HasEnd = false;
             this.timeArchive = timeArchive;
