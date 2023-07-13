@@ -26,5 +26,10 @@ namespace SampleFunctionApp.Fundamentals.Classes.IExecution
             executionLogicRecord.executionRecord.executionArchive.executionId = executionId;
             return true;
         }
+        public bool Stop()
+        {
+            executionLogicRecord.timeRecord.timeArchive.End = globalsArchive.GetTimeNow();
+            return true;
+        }
     }
 }

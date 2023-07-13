@@ -17,7 +17,7 @@ namespace SampleFunctionApp.Fundamentals.Classes.ITime
             HasEnd = false;
             this.timeArchive = timeArchive;
         }
-        public TimeSpan Duration { get; set; }
+        public TimeSpan? Duration { get => this.timeArchive.End - this.timeArchive.Start; }
         public bool HasEnd { get; set; }
         public bool HasStart()
         {
