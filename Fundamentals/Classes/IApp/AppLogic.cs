@@ -1,37 +1,31 @@
-﻿using SampleFunctionApp.Fundamentals.Classes.IExecution;
-using SampleFunctionApp.Fundamentals.Classes.IGeneral;
-using SampleFunctionApp.Fundamentals.Classes.ITime;
+﻿using SampleFunctionApp.Fundamentals.Classes.IGeneral;
 using SampleFunctionApp.Fundamentals.Interfaces.IApp;
 using SampleFunctionApp.Fundamentals.Interfaces.IExecution;
 
 using System;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Classes.IApp
 {
     public class AppLogic : IAppLogic
     {
-
-        // Todo: Reduce duplication of information only if it makes it simpler. Duplication of data is to be expected because these are designs for backend data.
-        
         public AppLogic(IAppLogicRecord appLogicRecord, IExecutionLogic executionLogic, GlobalsArchive globals)
         {
             appRelateId = globals.GetTimeNow();
             globals.appRelateId = appRelateId;
 
-            this.appLogicRecord = appLogicRecord;
-
             this.executionLogic = executionLogic;
             this.executionLogic.Start();
-            // Todo simplify and refactor
-            //executionLogic.ExecutionLogicRecord.executionRecord.executionArchive.HasNetwork = true;
+
+            this.appLogicRecord = appLogicRecord;
+
+            this.executionLogic.Stop();
         }
 
-        public async ValueTask<dynamic> PingTest()
+        public async ValueTask<dynamic> PingTest(string url)
         {
-            return await appLogicRecord.PingTest("http://microsoft.com");
+            this.executionLogic.SetNetwork(url);
+            return await appLogicRecord.PingTest(url);
         }
 
         public IAppLogicRecord appLogicRecord { get; set; }

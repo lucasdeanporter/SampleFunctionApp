@@ -8,6 +8,7 @@ namespace SampleFunctionApp.Fundamentals.Interfaces.IExecution
     {
         public DateTime executionId { get; set; }
         public bool HasNetwork { get; set; }
+        public string networkURL { get; set; }
         public bool HasUser { get; set; }
         public bool HasError { get; set; }
 

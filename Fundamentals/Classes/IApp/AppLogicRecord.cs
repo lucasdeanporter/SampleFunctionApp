@@ -14,7 +14,6 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
         {
             this.httpClientFactory = httpClientFactory;
             this.appRecord = appRecord;
-
         }
         public IAppRecord appRecord { get; set; }
         public async Task<dynamic> PingTest(string url)
@@ -26,7 +25,7 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
             }
             catch
             {
-                return null;
+                return false;
             }
         }
 
@@ -57,6 +56,7 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
 
         public bool Write(IAppRecord toWrite)
         {
+
             return false;
         }
     }

@@ -13,18 +13,18 @@ using SampleFunctionApp.Fundamentals.Interfaces.Concepts;
 using System.Net.Http;
 namespace SampleFunctionApp
 {
-    public class Function1
+    public class HttpStart
     {
         private readonly HttpClient _client;
         IAppLogic appLogic;
 
-        public Function1(IHttpClientFactory httpClientFactory, IAppLogic appLogic)
+        public HttpStart(IHttpClientFactory httpClientFactory, IAppLogic appLogic)
         {
             this._client = httpClientFactory.CreateClient();
             this.appLogic = appLogic;
         }
 
-        [FunctionName("Function1")]
+        [FunctionName("HttpStart")]
         public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
@@ -32,8 +32,8 @@ namespace SampleFunctionApp
             var response = await _client.GetAsync("https://microsoft.com");
             var message = appLogic.PingTest();
 
-            return new OkObjectResult(appLogic);
-            //return new OkObjectResult(message);
+            //return new OkObjectResult(appLogic);
+            return new OkObjectResult(message);
         }
     }
 }
