@@ -15,13 +15,13 @@ namespace SampleFunctionApp
 {
     public class HttpStart
     {
-        private readonly HttpClient _client;
         IAppLogic appLogic;
+        IAppDisplay appDisplay;
 
-        public HttpStart(IHttpClientFactory httpClientFactory, IAppLogic appLogic)
+        public HttpStart(IAppLogic appLogic, IAppDisplay appDisplay)
         {
-            this._client = httpClientFactory.CreateClient();
             this.appLogic = appLogic;
+            this.appDisplay = appDisplay;
         }
 
         [FunctionName("HttpStart")]
@@ -29,11 +29,11 @@ namespace SampleFunctionApp
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            var response = await _client.GetAsync("https://microsoft.com");
-            var message = appLogic.PingTest();
-
+            dynamic message = await appLogic.PostAsyncArchive("https://microsoft.com");
+            appDisplay.AppLogic = appLogic;
+            appDisplay.Message = message;
             //return new OkObjectResult(appLogic);
-            return new OkObjectResult(message);
+            return new OkObjectResult(appDisplay);
         }
     }
 }

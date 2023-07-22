@@ -24,6 +24,8 @@ namespace SampleFunctionApp
         {
         // https://learn.microsoft.com/en-us/dotnet/core/extensions/httpclient-factory#basic-usage
             builder.Services.AddHttpClient();
+
+            builder.Services.AddTransient<IAppDisplay, AppDisplay>();
             builder.Services.AddTransient<IAppLogic, AppLogic>();
             builder.Services.AddTransient<IAppLogicRecord, AppLogicRecord>();
             builder.Services.AddTransient<IAppRecord, AppRecord>();
@@ -37,7 +39,7 @@ namespace SampleFunctionApp
             builder.Services.AddTransient<ITimeRecord, TimeRecord>();
             builder.Services.AddTransient<ITimeArchive, TimeArchive>();
 
-            builder.Services.AddSingleton<IGlobal, GlobalsArchive>();
+            builder.Services.AddSingleton<GlobalsArchive>();
             /*
             builder.Services.AddHttpClient();
 

@@ -3,7 +3,7 @@ using System;
 
 namespace SampleFunctionApp.Fundamentals.Classes.IGeneral
 {
-    public class GlobalsArchive : IGlobal
+    public class GlobalsArchive
     {
         public DateTime appRelateId;
         public DateTime GetTimeNow()
