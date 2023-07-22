@@ -17,7 +17,7 @@ namespace SampleFunctionApp.Fundamentals.Classes.IGeneral
             isString = false;
             Obj = obj;
         }
-        public void HowToRetrieveStringOrObject()
+        public void HowToRetrieveStringOrObject() //todo, dynamic, lost this logic when implemented in previous code.
         {
             // informational only, do not want to return dynamic types.
             if (isString != null) // this would mean the class is not properly implemented.
