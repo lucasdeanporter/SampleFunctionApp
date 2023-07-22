@@ -13,18 +13,18 @@ using SampleFunctionApp.Fundamentals.Interfaces.Concepts;
 using System.Net.Http;
 namespace SampleFunctionApp
 {
-    public class NetworkTest
+    public class HttpStart
     {
         private readonly HttpClient _client;
         IAppLogic appLogic;
 
-        public NetworkTest(IHttpClientFactory httpClientFactory, IAppLogic appLogic)
+        public HttpStart(IHttpClientFactory httpClientFactory, IAppLogic appLogic)
         {
             this._client = httpClientFactory.CreateClient();
             this.appLogic = appLogic;
         }
 
-        [FunctionName("NetworkTest")]
+        [FunctionName("HttpStart")]
         public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)

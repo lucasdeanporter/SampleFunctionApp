@@ -56,6 +56,7 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
 
         public bool Write(IAppRecord toWrite)
         {
+
             return false;
         }
     }
