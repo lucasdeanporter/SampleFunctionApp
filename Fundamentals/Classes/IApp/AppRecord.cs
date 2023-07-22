@@ -1,14 +1,33 @@
 ﻿using SampleFunctionApp.Fundamentals.Interfaces.IApp;
+using System.Net.Http;
+using System.Net.Http.Json;
+using System.Threading.Tasks;
 
 namespace SampleFunctionApp.Fundamentals.Classes.IApp
 {
     public class AppRecord : IAppRecord
     {
-        public AppRecord(IAppArchive appArchive) 
+        IHttpClientFactory httpClientFactory;
+        public AppRecord(IAppArchive appArchive, IHttpClientFactory httpClientFactory) 
         {
+            this.httpClientFactory = httpClientFactory;
             this.appArchive = appArchive;
         }
         public IAppArchive appArchive { get; set; }
+
+        public async ValueTask<bool> GetAsyncArchive(string url)
+        {
+            using HttpClient client = httpClientFactory.CreateClient();
+            try
+            {
+                appArchive = await client.GetFromJsonAsync<IAppArchive>(url);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
         public bool HandleWriteFailure(dynamic toWrite)
         {

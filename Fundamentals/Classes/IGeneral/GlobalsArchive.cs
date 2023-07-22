@@ -1,8 +1,9 @@
-﻿using System;
+﻿using SampleFunctionApp.Fundamentals.Interfaces.IGeneral;
+using System;
 
 namespace SampleFunctionApp.Fundamentals.Classes.IGeneral
 {
-    public class GlobalsArchive
+    public class GlobalsArchive : IGlobal
     {
         public DateTime appRelateId;
         public DateTime GetTimeNow()

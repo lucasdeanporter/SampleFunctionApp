@@ -25,7 +25,7 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
         public async ValueTask<dynamic> PingTest(string url)
         {
             this.executionLogic.SetNetwork(url);
-            return await appLogicRecord.PingTest(url);
+            return await appLogicRecord.PostAsyncArchive(url);
         }
 
         public IAppLogicRecord appLogicRecord { get; set; }

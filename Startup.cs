@@ -6,6 +6,7 @@ using SampleFunctionApp.Fundamentals.Classes.IGeneral;
 using SampleFunctionApp.Fundamentals.Classes.ITime;
 using SampleFunctionApp.Fundamentals.Interfaces.IApp;
 using SampleFunctionApp.Fundamentals.Interfaces.IExecution;
+using SampleFunctionApp.Fundamentals.Interfaces.IGeneral;
 using SampleFunctionApp.Fundamentals.Interfaces.ITime;
 
 // TODO: Async challenges, not a challenge: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios#wait-for-multiple-tasks-to-complete
@@ -36,7 +37,7 @@ namespace SampleFunctionApp
             builder.Services.AddTransient<ITimeRecord, TimeRecord>();
             builder.Services.AddTransient<ITimeArchive, TimeArchive>();
 
-            builder.Services.AddSingleton<GlobalsArchive>();
+            builder.Services.AddSingleton<IGlobal, GlobalsArchive>();
             /*
             builder.Services.AddHttpClient();
 

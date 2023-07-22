@@ -16,12 +16,13 @@ namespace SampleFunctionApp.Fundamentals.Classes.IApp
             this.appRecord = appRecord;
         }
         public IAppRecord appRecord { get; set; }
-        public async Task<dynamic> PingTest(string url)
+        public async Task<dynamic> PostAsyncArchive(string url)
         {
             using HttpClient client = httpClientFactory.CreateClient();
             try
             {
-                return await client.GetAsync(url);
+                IAppArchive message = appRecord.appArchive;
+                return await client.PostAsJsonAsync(url, message);
             }
             catch
             {
